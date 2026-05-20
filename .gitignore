@@ -1,0 +1,43 @@
+# Defensive: nothing but PNG/WebP/JPG bg images belongs in this repo.
+# Block every common secret/code/config file outright.
+
+# Secrets — never push
+.env
+.env.*
+*.env
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+secrets/
+private/
+*-private*
+*.private.*
+
+# Code / config that shouldn't be here
+node_modules/
+.next/
+.vercel/
+*.ts
+*.tsx
+*.js
+*.jsx
+*.mjs
+*.cjs
+package.json
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+tsconfig*.json
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build artifacts
+dist/
+build/
+out/
